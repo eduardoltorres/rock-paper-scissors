@@ -24,10 +24,17 @@ h1 {
 
 .users {
   display: flex;
+  margin: 0 40px;
 }
 
 .user {
-  flex-basis: 50%;
+  flex-basis: 33%;
+}
+
+.message {
+  font-size: 3em;
+  /* text-align: center; */
+  /* letter-spacing: .3em; */
 }
 
 .user > i {
