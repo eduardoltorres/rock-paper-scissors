@@ -25,6 +25,7 @@ function resetScore() {
   userScore.innerHTML = score.userScore;
   computerScore.innerHTML = score.computerScore;
   resultMessage.innerHTML = '';
+  userOptions.forEach(val => val.addEventListener('click', compareChoices));
 }
 
 backArrow.addEventListener('click', () => {
@@ -91,14 +92,13 @@ function compareChoices(e) {
 
   if (score.userScore === gameDuration || score.computerScore === gameDuration) {
     if (score.userScore === gameDuration) {
+      userOptions.forEach(val => val.removeEventListener('click', compareChoices));
       resultMessage.innerHTML = '👑💪'
-      // resetScore();
-      // userScore.innerHTML = score.userScore;
-      // computerScore.innerHTML = score.computerScore;
       setTimeout(() => {
         resetScore();
       }, 1500);
     } else if (score.computerScore === gameDuration) {
+      userOptions.forEach(val => val.removeEventListener('click', compareChoices));
       resultMessage.innerHTML = '☹️👎'
       setTimeout(() => {
         resetScore();
