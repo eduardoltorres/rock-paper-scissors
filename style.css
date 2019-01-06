@@ -1,7 +1,13 @@
+/* General Styles */
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+html:not(i) {
+  font-family: 'Orbitron', sans-serif;
 }
 
 body {
@@ -11,20 +17,79 @@ body {
   background: linear-gradient(to right, #93291E, #ED213A); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */  
 }
 
+li {
+  list-style: none;
+}
+
 h1 {
   background-color: #efefef;
   padding: 20px 0;
 }
 
-.score {
+/* Score Board Styles */
+
+.scoreBoard.active {
   color: #efefef;
   font-size: 6em;
   margin: 30px 0;
 }
 
-.users {
+.playerScores {
+  display: none;
+}
+
+.scoreBoard.active .playerScores {
+  display: block;
+}
+
+.choices {
   display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.scoreBoard.active .initialSetup {
+  display: none;
+}
+
+#bomb {
+  font-size: 5em;
+  margin: 60px 0 5px;
+}
+
+.choices p,
+.choices i {
+  color: #efefef;
+  font-size: .9em;
+  border: 1px solid #ebebeb;
+  padding: 50px 20px;
+  margin: 60px;
+  border-radius: 50%;
+  transition: .2s all ease-in-out;
+  cursor: pointer;
+  opacity: 0.9;
+}
+
+.choices i {
+  font-size: 1.5em;
+  padding: 45px;
+}
+
+.choices p:hover,
+.choices i:hover {
+  background-color: #efefef;
+  color: #ED213A;
+}
+
+/* Players Styles */
+
+.users {
+  display: none;
   margin: 0 40px;
+}
+
+.scoreBoard.active ~ .users {
+  display: flex;
 }
 
 .user {
@@ -33,6 +98,7 @@ h1 {
 
 .message {
   font-size: 3em;
+  color: #efefef;
   /* text-align: center; */
   /* letter-spacing: .3em; */
 }
