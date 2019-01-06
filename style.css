@@ -44,6 +44,10 @@ h1 {
   align-items: center;
 }
 
+.scoreBoard.active .initialSetup {
+  display: none;
+}
+
 #bomb {
   font-size: 5em;
   margin: 60px 0 5px;
@@ -78,6 +82,10 @@ h1 {
 .users {
   display: none;
   margin: 0 40px;
+}
+
+.scoreBoard.active ~ .users {
+  display: flex;
 }
 
 .user {
