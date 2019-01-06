@@ -48,6 +48,21 @@ h1 {
   align-items: center;
 }
 
+#back-arrow {
+  display: none;
+  color: #efefef;
+  font-size: .7em;
+  border: 1px solid #ebebeb;
+  padding: 20px;
+  border-radius: 50%;
+  transition: .1s all ease-in-out;
+  cursor: pointer;
+  opacity: 0.9;
+}
+.scoreBoard.active ~ div > #back-arrow {
+  display: inline-block;
+}
+
 .scoreBoard.active .initialSetup {
   display: none;
 }
@@ -76,7 +91,8 @@ h1 {
 }
 
 .choices p:hover,
-.choices i:hover {
+.choices i:hover,
+#back-arrow:hover {
   background-color: #efefef;
   color: #ED213A;
 }
