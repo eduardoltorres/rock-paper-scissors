@@ -14,7 +14,7 @@ let score = { userScore: 0, computerScore: 0 };
 
 durationChoices.forEach(val => {
   val.addEventListener('click', () => {
-    gameDuration = val.getAttribute('id');
+    gameDuration = Number(val.getAttribute('id'));
     scoreBoard.classList.add('active');
   });
 });
@@ -89,14 +89,20 @@ function compareChoices(e) {
   userScore.innerHTML = score.userScore;
   computerScore.innerHTML = score.computerScore;
 
-  if (score.userScore === 3 || score.computerScore === 3) {
-    if (score.userScore === 3) {
+  if (score.userScore === gameDuration || score.computerScore === gameDuration) {
+    if (score.userScore === gameDuration) {
       resultMessage.innerHTML = '👑💪'
       // resetScore();
       // userScore.innerHTML = score.userScore;
       // computerScore.innerHTML = score.computerScore;
-    } else if (score.computerScore === 3) {
+      setTimeout(() => {
+        resetScore();
+      }, 1500);
+    } else if (score.computerScore === gameDuration) {
       resultMessage.innerHTML = '☹️👎'
+      setTimeout(() => {
+        resetScore();
+      }, 1500);
     }
   }
 }
