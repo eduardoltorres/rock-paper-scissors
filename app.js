@@ -19,12 +19,18 @@ durationChoices.forEach(val => {
   });
 });
 
-backArrow.addEventListener('click', () => scoreBoard.classList.remove('active'));
 
 function resetScore() {
   score = { userScore: 0, computerScore: 0 };
+  userScore.innerHTML = score.userScore;
+  computerScore.innerHTML = score.computerScore;
+  resultMessage.innerHTML = '';
 }
 
+backArrow.addEventListener('click', () => {
+  resetScore();
+  scoreBoard.classList.remove('active');
+});
 // function clearResult() {
   // clearTimeout(timer1);
   // let timer1 = setTimeout(() => resultMessage.innerHTML = "", 3000);
