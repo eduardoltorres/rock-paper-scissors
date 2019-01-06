@@ -6,6 +6,7 @@ const computerScore = document.querySelector('#computerScore');
 const resultMessage = document.querySelector('.message');
 const durationChoices = document.querySelectorAll('.initialSetup > .choices > li');
 const scoreBoard = document.querySelector('.scoreBoard');
+const backArrow = document.querySelector('#back-arrow');
 let gameDuration;
 let score = { userScore: 0, computerScore: 0 };
 
@@ -17,6 +18,8 @@ durationChoices.forEach(val => {
     scoreBoard.classList.add('active');
   });
 });
+
+backArrow.addEventListener('click', () => scoreBoard.classList.remove('active'));
 
 function resetScore() {
   score = { userScore: 0, computerScore: 0 };
