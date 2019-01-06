@@ -5,6 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>👊, 🤚, ✌️, 🍕</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css?family=Orbitron" rel="stylesheet">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
   <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
 
@@ -12,8 +13,17 @@
 <body>
   <h1>👊, 🤚, ✌️, 🍕</h1>
 
-  <div class="score">
-    <span id="userScore">0</span> : <span id="computerScore">0</span>
+  <div class="scoreBoard">
+    <p id='bomb'>💣</p>
+  
+    <div class="choices">
+      <p id='2'>2 out of 3</p>
+      <p id='3'>3 out of 5</p>
+      <i id='0' class="fas fa-infinity"></i>
+    </div>
+    <div class="playerScores">
+      <span id="userScore">0</span> : <span id="computerScore">0</span>
+    </div>
   </div>
 
   <div class="users">

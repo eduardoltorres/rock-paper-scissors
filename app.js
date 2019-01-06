@@ -12,71 +12,74 @@ function resetScore() {
   score = { userScore: 0, computerScore: 0 };
 }
 
-function clearResult() {
-  setTimeout(() => resultMessage.innerHTML = "", 3000);
-}
+// function clearResult() {
+  // clearTimeout(timer1);
+  // let timer1 = setTimeout(() => resultMessage.innerHTML = "", 3000);
+// }
 
 function compareChoices(e) {
+  e.preventDefault();
+
   let computerChoice = computerOptions[Math.floor(Math.random() * 3)].getAttribute('id');
   let userChoice = e.target.id;
-  console.log(e.target.innerHTML);
 
   if (userChoice === 'r' && computerChoice === 'r') {
     console.log('tie');
     resultMessage.innerHTML = '👊🤷‍♂️👊';
-    clearResult();
+    // clearResult();
   } else if (userChoice === 'r' && computerChoice === 'p') {
     console.log('user loses');
     score.computerScore += 1;
     resultMessage.innerHTML = '👊☠️🤚';
-    clearResult();
+    // clearResult();
   } else if (userChoice === 'r' && computerChoice === 's') {
     console.log('user wins');
     score.userScore += 1;
     resultMessage.innerHTML = '👊⚡️✌️';
-    clearResult();
+    // clearResult();
   } else if (userChoice === 'p' && computerChoice === 'r') {
     console.log('user wins');
     score.userScore += 1;
     resultMessage.innerHTML = '🤚⚡️👊';
-    clearResult();
+    // clearResult();
   }  else if (userChoice === 'p' && computerChoice === 'p') {
     console.log('tie');
     resultMessage.innerHTML = '🤚🤷‍🤚';
-    clearResult();
+    // clearResult();
   } else if (userChoice === 'p' && computerChoice === 's') {
     console.log('user loses');
     score.computerScore += 1;
     resultMessage.innerHTML = '🤚☠️✌️';
-    clearResult();
+    // clearResult();
   } else if (userChoice === 's' && computerChoice === 'r') {
     console.log('user loses');
     score.computerScore += 1;
     resultMessage.innerHTML = '✌️☠️👊';
-    clearResult();
+    // clearResult();
   } else if (userChoice === 's' && computerChoice === 'p') {
     console.log('user wins');
     score.userScore += 1;
     resultMessage.innerHTML = '✌️⚡️🤚';
-    clearResult();
+    // clearResult();
   } else if (userChoice === 's' && computerChoice === 's') {
     console.log('tie');
     resultMessage.innerHTML = '✌️🤷‍✌️';
-    clearResult();
+    // clearResult();
   }
 
   userScore.innerHTML = score.userScore;
   computerScore.innerHTML = score.computerScore;
 
-  // if (score.userScore === 3 || score.computerScore === 3) {
-  //   if (score.userScore === 3) {
-  //     resetScore();
-  //     userScore.innerHTML = score.userScore;
-  //     computerScore.innerHTML = score.computerScore;
-  //   } else if (score.computerScore === 3) {
-  //     alert('comp wins');
-  //   }
-  // }
+  if (score.userScore === 3 || score.computerScore === 3) {
+    if (score.userScore === 3) {
+      resultMessage.innerHTML = '👑💪'
+      // resetScore();
+      // userScore.innerHTML = score.userScore;
+      // computerScore.innerHTML = score.computerScore;
+    } else if (score.computerScore === 3) {
+      resultMessage.innerHTML = '☹️👎'
+    }
+  }
 }
 
 
