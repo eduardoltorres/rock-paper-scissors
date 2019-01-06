@@ -1,14 +1,15 @@
 // HTML Elements And Variables
-const userOptions = document.querySelectorAll('.user-player > .choices > span');
 const computerOptions = document.querySelectorAll('.user-computer > .choices > span');
-const userScore = document.querySelector('#userScore');
-const computerScore = document.querySelector('#computerScore');
-const resultMessage = document.querySelector('.message');
 const durationChoices = document.querySelectorAll('.initialSetup > .choices > li');
-const scoreBoard = document.querySelector('.scoreBoard');
-const backArrow = document.querySelector('#back-arrow');
-let gameDuration;
+const computerScore   = document.querySelector('#computerScore');
+const resultMessage   = document.querySelector('.message');
+const userOptions     = document.querySelectorAll('.user-player > .choices > span');
+const scoreBoard      = document.querySelector('.scoreBoard');
+const userScore       = document.querySelector('#userScore');
+const backArrow       = document.querySelector('#back-arrow');
+
 let score = { userScore: 0, computerScore: 0 };
+let gameDuration;
 
 // Interactivity
 durationChoices.forEach(val => {
