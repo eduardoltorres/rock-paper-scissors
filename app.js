@@ -1,4 +1,4 @@
-// HTML Elements
+// HTML Elements And Variables
 const userOptions = document.querySelectorAll('.user-player > .choices > span');
 const computerOptions = document.querySelectorAll('.user-computer > .choices > span');
 const userScore = document.querySelector('#userScore');
@@ -10,8 +10,7 @@ const backArrow = document.querySelector('#back-arrow');
 let gameDuration;
 let score = { userScore: 0, computerScore: 0 };
 
-// Functionality
-
+// Interactivity
 durationChoices.forEach(val => {
   val.addEventListener('click', () => {
     gameDuration = Number(val.getAttribute('id'));
@@ -19,20 +18,14 @@ durationChoices.forEach(val => {
   });
 });
 
-
-function resetScore() {
-  score = { userScore: 0, computerScore: 0 };
-  userScore.innerHTML = score.userScore;
-  computerScore.innerHTML = score.computerScore;
-  resultMessage.innerHTML = '';
-  userOptions.forEach(val => val.addEventListener('click', compareChoices));
-}
-
 backArrow.addEventListener('click', () => {
   resetScore();
   scoreBoard.classList.remove('active');
 });
 
+userOptions.forEach(val => val.addEventListener('click', compareChoices));
+
+// Functionality
 function compareChoices(e) {
   e.preventDefault();
 
@@ -67,24 +60,29 @@ function compareChoices(e) {
 
   userScore.innerHTML = score.userScore;
   computerScore.innerHTML = score.computerScore;
+  endGame();
+}
 
-  if (score.userScore === gameDuration || score.computerScore === gameDuration) {
-    if (score.userScore === gameDuration) {
-      userOptions.forEach(val => val.removeEventListener('click', compareChoices));
-      resultMessage.innerHTML = '👑💪'
-      setTimeout(() => {
-        resetScore();
-      }, 1500);
-    } else if (score.computerScore === gameDuration) {
-      userOptions.forEach(val => val.removeEventListener('click', compareChoices));
-      resultMessage.innerHTML = '☹️👎'
-      setTimeout(() => {
-        resetScore();
-      }, 1500);
-    }
+function endGame() {
+  if (score.userScore === gameDuration) {
+    userOptions.forEach(val => val.removeEventListener('click', compareChoices));
+    resultMessage.innerHTML = '👑💪'
+    setTimeout(() => {
+      resetScore();
+    }, 1500);
+  } else if (score.computerScore === gameDuration) {
+    userOptions.forEach(val => val.removeEventListener('click', compareChoices));
+    resultMessage.innerHTML = '☹️👎'
+    setTimeout(() => {
+      resetScore();
+    }, 1500);
   }
 }
 
-
-// Interactivity
-userOptions.forEach(val => val.addEventListener('click', compareChoices));
+function resetScore() {
+  score = { userScore: 0, computerScore: 0 };
+  userScore.innerHTML = score.userScore;
+  computerScore.innerHTML = score.computerScore;
+  resultMessage.innerHTML = '';
+  userOptions.forEach(val => val.addEventListener('click', compareChoices));
+}
