@@ -4,9 +4,19 @@ const computerOptions = document.querySelectorAll('.user-computer > .choices > s
 const userScore = document.querySelector('#userScore');
 const computerScore = document.querySelector('#computerScore');
 const resultMessage = document.querySelector('.message');
+const durationChoices = document.querySelectorAll('.initialSetup > .choices > li');
+const scoreBoard = document.querySelector('.scoreBoard');
+let gameDuration;
 let score = { userScore: 0, computerScore: 0 };
 
 // Functionality
+
+durationChoices.forEach(val => {
+  val.addEventListener('click', () => {
+    gameDuration = val.getAttribute('id');
+    scoreBoard.classList.add('active');
+  });
+});
 
 function resetScore() {
   score = { userScore: 0, computerScore: 0 };
