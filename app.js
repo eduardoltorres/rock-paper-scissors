@@ -32,10 +32,6 @@ backArrow.addEventListener('click', () => {
   resetScore();
   scoreBoard.classList.remove('active');
 });
-// function clearResult() {
-  // clearTimeout(timer1);
-  // let timer1 = setTimeout(() => resultMessage.innerHTML = "", 3000);
-// }
 
 function compareChoices(e) {
   e.preventDefault();
@@ -44,47 +40,29 @@ function compareChoices(e) {
   let userChoice = e.target.id;
 
   if (userChoice === 'r' && computerChoice === 'r') {
-    console.log('tie');
     resultMessage.innerHTML = '👊🤷‍♂️👊';
-    // clearResult();
   } else if (userChoice === 'r' && computerChoice === 'p') {
-    console.log('user loses');
     score.computerScore += 1;
     resultMessage.innerHTML = '👊☠️🤚';
-    // clearResult();
   } else if (userChoice === 'r' && computerChoice === 's') {
-    console.log('user wins');
     score.userScore += 1;
     resultMessage.innerHTML = '👊⚡️✌️';
-    // clearResult();
   } else if (userChoice === 'p' && computerChoice === 'r') {
-    console.log('user wins');
     score.userScore += 1;
     resultMessage.innerHTML = '🤚⚡️👊';
-    // clearResult();
   }  else if (userChoice === 'p' && computerChoice === 'p') {
-    console.log('tie');
     resultMessage.innerHTML = '🤚🤷‍🤚';
-    // clearResult();
   } else if (userChoice === 'p' && computerChoice === 's') {
-    console.log('user loses');
     score.computerScore += 1;
     resultMessage.innerHTML = '🤚☠️✌️';
-    // clearResult();
   } else if (userChoice === 's' && computerChoice === 'r') {
-    console.log('user loses');
     score.computerScore += 1;
     resultMessage.innerHTML = '✌️☠️👊';
-    // clearResult();
   } else if (userChoice === 's' && computerChoice === 'p') {
-    console.log('user wins');
     score.userScore += 1;
     resultMessage.innerHTML = '✌️⚡️🤚';
-    // clearResult();
   } else if (userChoice === 's' && computerChoice === 's') {
-    console.log('tie');
     resultMessage.innerHTML = '✌️🤷‍✌️';
-    // clearResult();
   }
 
   userScore.innerHTML = score.userScore;
