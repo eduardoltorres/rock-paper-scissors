@@ -112,7 +112,7 @@ h1 {
   flex-basis: 33%;
 }
 
-.message {
+.result-message {
   font-size: 3em;
   color: #efefef;
   /* text-align: center; */

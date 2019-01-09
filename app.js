@@ -2,7 +2,7 @@
 const computerOptions = document.querySelectorAll('.players__computer > .choices > span');
 const durationChoices = document.querySelectorAll('.initial-setup > .choices > li');
 const computerScore   = document.querySelector('#score__computer');
-const resultMessage   = document.querySelector('.message');
+const resultMessage   = document.querySelector('.result-message');
 const userOptions     = document.querySelectorAll('.players__user > .choices > span');
 const scoreBoard      = document.querySelector('.scoreboard');
 const userScore       = document.querySelector('#score__user');
