@@ -29,6 +29,7 @@ h1 {
 
 /* Scoreboard Styles */
 
+
 .scoreboard.active .score {
   display: block;
   margin: 30px 0;
@@ -82,6 +83,31 @@ h1 {
 .choices i {
   font-size: 1.5em;
   padding: 45px;
+}
+
+@media (max-width: 740px) {
+  .initial-setup__choices p,
+  .initial-setup__choices i {
+    margin: 60px 35px;
+  }
+}
+@media (max-width: 570px) {
+  .initial-setup__choices p,
+  .initial-setup__choices i {
+    margin: 60px 15px;
+    padding: 35px 10px;
+    font-size: 0.8em;
+  }
+  .choices i {
+    font-size: 1em;
+    padding: 34px;
+  }
+}
+@media (max-width: 360px) {
+  .initial-setup__choices p,
+  .initial-setup__choices i {
+    margin: 60px 5px;
+  }
 }
 
 .choices p:hover,
