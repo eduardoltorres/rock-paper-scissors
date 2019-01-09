@@ -73,7 +73,7 @@ function endGame() {
     }, 1500);
   } else if (score.computerScore === gameDuration) {
     userOptions.forEach(val => val.removeEventListener('click', compareChoices));
-    resultMessage.innerHTML = '☹️👎'
+    resultMessage.innerHTML = '🙁👎'
     setTimeout(() => {
       resetScore();
     }, 1500);
