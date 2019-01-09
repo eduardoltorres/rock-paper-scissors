@@ -1,11 +1,11 @@
 // HTML Elements And Variables
-const computerOptions = document.querySelectorAll('.user-computer > .choices > span');
-const durationChoices = document.querySelectorAll('.initialSetup > .choices > li');
-const computerScore   = document.querySelector('#computerScore');
+const computerOptions = document.querySelectorAll('.players__computer > .choices > span');
+const durationChoices = document.querySelectorAll('.initial-setup > .choices > li');
+const computerScore   = document.querySelector('#score__computer');
 const resultMessage   = document.querySelector('.message');
-const userOptions     = document.querySelectorAll('.user-player > .choices > span');
-const scoreBoard      = document.querySelector('.scoreBoard');
-const userScore       = document.querySelector('#userScore');
+const userOptions     = document.querySelectorAll('.players__user > .choices > span');
+const scoreBoard      = document.querySelector('.scoreboard');
+const userScore       = document.querySelector('#score__user');
 const backArrow       = document.querySelector('#back-arrow');
 
 let score = { userScore: 0, computerScore: 0 };

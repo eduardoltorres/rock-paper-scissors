@@ -13,41 +13,36 @@
 <body>
   <h1>👊, 🤚, ✌️, 🍕</h1>
 
-  <div class="scoreBoard">
-    
-    <!-- Initial Setup -->
-    <div class="initialSetup">
+  <div class="scoreboard">
+    <div class="initial-setup">
       <p id='bomb'>💣</p>
-      <div class="choices">
+      <div class="initial-setup__choices choices">
         <li id='2'><p>2 out of 3</p></li>
         <li id='3'><p>3 out of 5</p></li>
         <li id='Infinity'><i class="fas fa-infinity"></i></li>
       </div>
     </div>
 
-    <!-- Game Setup -->
-    <div class="playerScores">
-      <span id="userScore">0</span> : <span id="computerScore">0</span>
+    <div class="score">
+      <span id="score__user">0</span> : <span id="score__computer">0</span>
     </div>
-
   </div>
 
-  <!-- Players -->
-  <div class="users">
-    <div class="user user-player">
+  <div class="players">
+    <div class="player players__user">
       <i class="fas fa-user"></i>
-      <div class="choices">
+      <div class="weapon-choices choices">
         <span id="r">👊</span>
         <span id="p">🤚</span>
         <span id="s">✌️</span>
       </div>
     </div>
 
-    <p class="user message"></p>
+    <p class="player message"></p>
   
-    <div class="user user-computer">
+    <div class="player players__computer">
       <i class="fas fa-laptop"></i>
-      <div class="choices">
+      <div class="weapon-choices choices">
           <span id="r">👊</span>
           <span id="p">🤚</span>
           <span id="s">✌️</span>
