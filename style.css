@@ -29,7 +29,6 @@ h1 {
 
 /* Scoreboard Styles */
 
-
 .scoreboard.active .score {
   display: block;
   margin: 30px 0;
@@ -129,11 +128,12 @@ h1 {
 }
 
 .player {
-  flex-basis: 33%;
+  flex-basis: 50%;
 }
 
 .result-message {
   font-size: 3em;
+  display: inline;
 }
 
 .player > i {
@@ -153,7 +153,7 @@ h1 {
   margin: 0 10px;
   border: 1px solid #ebebeb;
   padding: 30px 35px;
-  border-radius: 100px;
+  border-radius: 50%;
   transition: .2s all ease-in-out;
   opacity: .9;
 }
@@ -167,4 +167,41 @@ h1 {
 
 .players__computer > .weapon-choices > span {
   cursor: not-allowed;
+}
+
+@media (max-width: 940px) {
+  .scoreboard.active .score {
+    font-size: 4em;
+  }
+  .result-message {
+    font-size: 2em;
+    padding-top: 100px;
+  }
+  .player > i {
+    font-size: 1.5em;
+    margin: 0 0 35px;
+  }
+  .player > .weapon-choices {
+    display: grid;
+    grid-template-rows: repeat(auto-fit, 1fr);
+    grid-gap: 10px;
+  }
+  .player > .weapon-choices > span {
+    font-size: .7em;
+    padding: 25px 30px;
+  }
+}
+@media (max-width: 400px) {
+  .scoreboard.active .score {
+    font-size: 4em;
+  }
+  .result-message {
+    font-size: 1.5em;
+  }
+  .player > i {
+    font-size: 1em;
+  }
+  .player > .weapon-choices > span {
+    padding: 20px 25px;
+  }
 }
