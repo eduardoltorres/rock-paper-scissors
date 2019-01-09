@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>👊, 🤚, ✌️, 🍕</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css?family=Orbitron" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+
+</head>
+<body>
+  <h1>👊, 🤚, ✌️, 🍕</h1>
+
+  <div class="scoreboard">
+    <div class="initial-setup">
+      <p id='bomb'>💣</p>
+      <div class="initial-setup__choices choices">
+        <li id='2'><p>2 out of 3</p></li>
+        <li id='3'><p>3 out of 5</p></li>
+        <li id='Infinity'><i class="fas fa-infinity"></i></li>
+      </div>
+    </div>
+
+    <div class="score">
+      <span id="score__user">0</span> : <span id="score__computer">0</span>
+    </div>
+  </div>
+
+  <div class="players">
+    <div class="player players__user">
+      <i class="fas fa-user"></i>
+      <div class="weapon-choices choices">
+        <span id="r">👊</span>
+        <span id="p">🤚</span>
+        <span id="s">✌️</span>
+      </div>
+    </div>
+
+    <p class="player result-message"></p>
+  
+    <div class="player players__computer">
+      <i class="fas fa-laptop"></i>
+      <div class="weapon-choices choices">
+          <span id="r">👊</span>
+          <span id="p">🤚</span>
+          <span id="s">✌️</span>
+      </div>
+    </div>
+  </div>
+  
+  <div>
+      <i id="back-arrow" class="fas fa-arrow-left"></i>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
