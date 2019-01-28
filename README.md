@@ -1,7 +1,7 @@
 # 👊, 🤚, ✌️, 🍕
 A classic game of [rock, paper, scissors](https://en.wikipedia.org/wiki/Rock%E2%80%93paper%E2%80%93scissors) built with emojis! I mean, with HTML/CSS and JavaScript.
 
-![](../blob/master/images/demo.png)
+![](https://github.com/eduardoltorres/rock-paper-scissors/blob/master/images/demo.png)
 *Ready to play?*
 
 ## The Story Behind
@@ -9,9 +9,9 @@ Rock, paper, scissors is usually one of the most recommended toddler projects fo
 
 ## Features & Functionalities
 - **3** different game durations:
-⋅⋅* 2 out of 3
-⋅⋅* 3 out of 5
-⋅⋅* To **infinity** and beyond!🚀
+    * 2 out of 3
+    * 3 out of 5
+    * To **infinity** and beyond!🚀
 - Mobile-responsive
 
 ## License
