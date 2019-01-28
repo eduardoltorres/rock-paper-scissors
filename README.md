@@ -18,7 +18,7 @@ Rock, paper, scissors is usually one of the most recommended toddler projects fo
 This project is licensed under the MIT License - see the [LICENSE](https://github.com/eduardoltorres/rock-paper-scissors/blob/master/LICENSE) file for details.
 
 ## What's with the pizza?
-Well, who doesn't like pizza? (Just kidding (not kidding). Read below the *Contributions* section)
+Well, who doesn't like pizza? (Just kidding [not kidding]. Read below the *Contributions* section)
 
 ## Contributions
 Feel free to open an issue or submit a PR for anything you think can make the world a better place (even if it's just a little). Some ideas as to how you could make the world a better place by opening an issue or submitting a PR:
