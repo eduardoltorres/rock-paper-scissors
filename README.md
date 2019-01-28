@@ -5,7 +5,7 @@ A classic game of [rock, paper, scissors](https://en.wikipedia.org/wiki/Rock%E2%
 *Ready to play?*
 
 ## The Story Behind
-Rock, paper, scissors is usually one of the most recommended toddler projects for new web developers. This is my best attempt at it by writing the best code I could.
+Rock, paper, scissors is usually one of the most recommended toddler projects for new web developers. This is my best attempt at it.
 
 ## Features & Functionalities
 - **3** different game durations:
@@ -20,8 +20,8 @@ This project is licensed under the MIT License - see the [LICENSE](../blob/maste
 ## What's with the pizza?
 Well, who doesn't like pizza? (Just kidding, read below the *Contributions* section)
 
-## Contribution
+## Contributions
 Feel free to open an issue or submit a PR for anything you think can make the world a better place (even if it's just a little). Some ideas as to how you could make the world a better place by submitting a PR:
 - Refactoring or making the code more clean and maintainable
 - Bug reports
-- You would like to add an easter egg (Hint: 🍕)
+- Adding an easter egg (Hint: 🍕)
