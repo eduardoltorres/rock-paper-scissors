@@ -1,7 +1,7 @@
 # 👊, 🤚, ✌️, 🍕
 A classic game of [rock, paper, scissors](https://en.wikipedia.org/wiki/Rock%E2%80%93paper%E2%80%93scissors) built with emojis! I mean, with HTML/CSS and JavaScript. Play it [here](https://eduardoltorres.github.io/rock-paper-scissors/).
 
-![](https://github.com/eduardoltorres/rock-paper-scissors/blob/master/images/demo.png)
+![](https://cl.ly/a673bde1cf44/Image%202019-01-29%20at%206.46.21%20AM.png)
 *Ready to play?*
 
 ## The Story Behind
